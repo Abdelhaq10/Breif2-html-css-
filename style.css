@@ -1,0 +1,618 @@
+html{
+    width: 100%;
+    background-color: black;
+}
+*{
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+header{
+    position:fixed;
+    border: 1px solid black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 10000;
+    justify-content: space-between;
+    background: black;
+}
+header img{
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+}
+header .list{
+    /* position: relative; */
+    display: flex;
+    margin-right: 80px;
+    align-items: center;
+    justify-content:space-around ;
+   
+    
+}
+.menu, .close{
+    display: none;
+}
+
+header .list li{
+    list-style: none;
+    margin-left: 50px;
+    /* display: inline-block; */
+}
+header .list li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+}
+.space{
+    width: 250px;
+    display: flex;
+    margin-left: 45px;
+    text-decoration: none;
+    justify-content: space-evenly;
+}
+.button1
+{
+  text-decoration: none;
+   width:100px;
+   background: black;
+   color: white;
+   padding: 5px 10px;
+   text-align: center;
+   border: 1px solid grey;
+    border-radius: 30px;
+}
+.button2
+{
+  text-decoration: none;
+   width:100px;
+   color: black;
+   background: white;
+   padding: 5px 10px;
+   text-align: center;
+   border: 1px solid black;
+    border-radius: 30px;
+}
+.front{
+    background-image: url("images/pexels-savvas-stavrinos.jpg"); 
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 500px !important;
+    width: 100% !important;
+    overflow-x: hidden;
+}
+.center{
+    
+    background-color: black;
+    width: 100%;
+   text-align: center;
+
+}
+.centerlogo{
+    width:150px;
+    height: 150px;
+    margin-top: 80px;
+    padding: 10px 20px;
+    border-radius: 100%;
+    border: 2px solid GREY;
+}
+p{
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+.para{
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.Title
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    text-align: center;
+    color: white;
+    border: 8px solid white;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 57px;
+    margin: auto;
+    padding: 20px 30px;
+    
+}
+.block{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 65px;
+}
+.blockimg{
+    width:45%;
+    height: 15%;
+    
+}
+.parablock{
+    margin-top: 120px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.services{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    align-items: center;
+}
+.services .card1
+{
+    border: 1px solid rebeccapurple;
+    width: 400px;
+    height: 250px;
+    background:url("images/pexels-gustavo-fring-4173199.jpg") no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.services .card2
+{
+    border: 1px solid rebeccapurple;
+    width: 400px;
+    height: 250px;
+    background:url("images/pexels-gustavo-fring-4173190.jpg") no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.services .card3
+{
+    border: 1px solid rebeccapurple;
+    width: 400px;
+    height: 250px;
+    background:url("images/pexels-anthony-shkraba-7144207.jpg") no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: center; 
+    border-radius: 10px;
+}
+H3{
+    color: white;
+}
+.read-more{
+    text-align: center;
+    color: black;
+    /* stroke: 12px cyan; */
+    text-shadow: 1px 1px WHITE;
+}
+.card1 .div{
+    position: center;
+    width: 300px;
+    font-size: 16px;
+    justify-content: center;
+    opacity: 0;
+    transition: .5s ease;
+}
+.card2 .div{
+    position: center;
+    width: 300px;
+    font-size: 16px;
+    justify-content: center;
+    opacity: 0;
+    transition: .5s ease;
+}
+.card3 .div{
+    position: center;
+    width: 300px;
+    font-size: 16px;
+    justify-content: center;
+    opacity: 0;
+    transition: .5s ease;
+}
+.button-more{
+    display: inline-block;
+   width: 50%;
+   color:white;
+   background-color: black;
+   padding: 5px 10px;
+   text-align: center;
+   border: 1px solid;
+    border-radius: 30px;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+.services :hover .div {
+    opacity: 1; 
+}
+.titles{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 120px;
+    align-items: center;  
+}
+.why-us
+{
+    display: flex;
+    justify-content: center;
+}
+.use{
+       margin-top: 50px;
+        width: 30%;
+        text-align: center;
+        color: white;
+        border: 8px solid white;
+        border-left: 0px;
+        border-right: 0px; 
+        font-size: 37px;
+        float: center;
+        padding: 10px 20px; 
+}
+.block-img{
+    width:35%;
+    height:5%;  
+}
+.para-block{
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.slider{
+    
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: 90px;
+    
+ }
+
+::-webkit-scrollbar{display: none;}
+
+.slider .team{
+    width:320px;
+    height: 480px;
+    text-align: center;
+    /* border: 1px solid black; */
+    display: inline-block;
+    justify-content: space-around;
+    margin-left: 40px;
+   
+}
+.pdp{
+    width: 320px;
+    height: 250px; 
+    background: url("images/pexels-rodnae-productions-7845453.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.pdp2{
+    width: 320px;
+    height: 250px; 
+    background: url("images/pexels-vantha-thang-4446165.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.pdp1{
+    width: 320px;
+    height: 250px; 
+    background: url("images/pexels-minervastudio-2897883.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.pdp3{
+    width: 320px;
+    height: 250px; 
+    background: url("images/pexels-docta-ulimwengu-4183516.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.pdp4{
+    width: 320px;
+    height: 250px; 
+    background: url("images/pexels-andrea-piacquadio-3756884.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.name{
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    margin-top: 10px;
+}
+.job{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.desc{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.our-team{
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+}
+.footer{
+    width: 100%;
+    height: 80px;
+    margin-top: 120px;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.media1{
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    /* margin-right: 250px; */
+    text-align: center;
+    align-items: center;
+}
+.media2{
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    /* margin-left: 250px; */
+    text-align: center;
+    align-items: center;
+}
+/* Mobile version */
+@media (max-width:560px) {
+  header{
+      height: 70px;
+  }
+    header img{
+       width: 50px;
+       height:50px;
+       margin-left: 12px;
+       padding: 10px 0px;
+   }
+ 
+    header .list{
+        border: 1px solid black;
+        position: fixed;
+        inset: 0 0 0 60%; 
+        flex-direction:column;
+        align-items: center;
+        background: white;
+        width: 55%;
+        justify-content: start;
+     
+        
+   }
+   header .list li{
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 25PX;
+    margin-right:120px;
+    width: 50%;
+    text-align: center;
+
+}
+
+header .list li a{
+    color: black;
+    font-size: 18px;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.space{
+    margin-top:250px;
+    margin-right: 120px;
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 200px;
+}
+.menu, .close{
+    display: block;
+}
+
+.front{
+
+    height: 300px !important;
+    width: 100% !important;
+    overflow-x: hidden;
+}
+.Title
+{
+   
+    top: 30%;
+    left: 50%;
+    width: 50%;
+    text-align: center;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 25px;  
+}
+.centerlogo{
+    width:100px;
+    height: 100px;
+    margin-top: 60px;
+}
+.block{
+    display: inline-block;
+
+    margin-top: 65px;
+}
+.blockimg{
+    width:35%;
+    height: 15%;
+   
+}
+.parablock{
+    margin-top: 40px;
+    font-size: 13px;
+}
+.services{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+
+}
+.services .card1
+{
+   
+    width:300px;
+    height: 250px;
+    margin-bottom: 30px;
+}
+.services .card2
+{
+    width:300px;
+    height: 250px;
+    margin-bottom: 30px;
+}
+.services .card3
+{
+    width:300px;
+    height: 250px;
+    margin-bottom: 30px;
+}
+p{
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+.para{
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+.use{
+     width: 40%;
+     text-align: center;
+     font-size: 17px;
+}
+.para-block{
+    margin-top: 10px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.block-img{
+    width:45%;
+    height: 15%;
+    margin-top: 30px;
+}
+.slider{
+    width: 390px;  
+    
+    margin-left: 65px;
+ }
+
+::-webkit-scrollbar{display: none;}
+
+.slider .team{
+    width:320px;
+    height: 480px;
+    text-align: center;
+    /* border: 1px solid black; */
+    display: inline-block;
+    justify-content:center;
+    align-items: center;
+    margin-left: 10px;
+   border: 1px solid red;
+}
+
+.pdp{
+    width: 300px;
+    height: 250px; 
+    
+}
+.pdp1{
+    width: 300px;
+    height: 250px; 
+    
+}
+.pdp2{
+    width: 300px;
+    height: 250px; 
+    
+}
+.pdp3{
+    width: 300px;
+    height: 250px; 
+    
+}
+.pdp4{
+    width: 300px;
+    height: 250px; 
+    
+}
+.footer{
+    width: 100%;
+    height: 80px;
+    margin-top: 100px;
+    background-color: black;
+}
+.logo{
+    width: 20px;
+    height: 20px;
+}
+.media1{
+    display: inline-block; 
+    width: 80px;  
+    display: inline-block;
+    
+    
+}
+.copy{
+    font-size: 12px;
+    width: 245px;
+}
+.div{
+}
+.media2{
+    display: inline-block;
+    width: 60px;
+ 
+}
+.menu{
+    margin-left: 60px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    background: url("images/425-4251166_menu-bar-icon-white-clipart.png");
+    border: 1px solid;
+  
+}
+.close{
+    margin-left :62px;
+    margin-top: 10px;
+    width: 30px;
+    height: auto;
+
+}
+}
